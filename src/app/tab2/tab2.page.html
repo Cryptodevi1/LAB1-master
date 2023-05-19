@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Лабораторна робота №1
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>
+      Виконав студент групи КН-32 Замрій І. А.
+    </ion-title>
+    <ion-title>
+      Варіант 5
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Завдання №2</ion-card-title> 
+    </ion-card-header>
+    <ion-card-content>
+      <p class = "p_background"> Підрахуйте добуток цілих чисел на заданому проміжку чисел [a,b], парних і кратних 8.</p>
+      <ion-item>
+        <ion-label position = "floating">Ліва межа проміжку</ion-label>
+        <ion-input type="number" id = "a" value="0" #Inputa></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position = "floating">Права межа добутку</ion-label>
+        <ion-input type="number" id = "b" value="1" #Inputb></ion-input>
+      </ion-item>  
+      <ion-button expand="block" (click)="ras(Inputa.value, Inputb.value)">Розрахунок</ion-button>
+      <ion-item>
+        <p>Результат обчислення {{d}}</p>
+      </ion-item>
+    </ion-card-content>
+</ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Лабораторна робота №1</ion-title>
+  </ion-toolbar>
+</ion-footer>

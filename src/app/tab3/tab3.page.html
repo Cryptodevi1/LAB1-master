@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Лабораторна робота №1
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>
+      Виконав студент групи КН-32 Замрій І. А.
+    </ion-title>
+    <ion-title>
+      Варіант 5
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Завдання №3</ion-card-title> 
+    </ion-card-header>
+    <ion-card-content>
+      <p class = "p_background"> Згенерувати матрицю розміром NxN. Знайти добуток кожного стовпчику матриці. Виокремити стовпчики за допомогою кольору</p>
+      <ion-item>
+        <ion-label position = "floating">Розмір матриці</ion-label>
+        <ion-input type="number" id = "a" value="3" #Inputn></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="arrayras(Inputn.value)"> Сформувати матрицю</ion-button>
+      <ion-item>
+        <ion-grid>
+          <ion-row *ngFor="let i of a">
+            <ion-col *ngFor="let j of i; let col = index" [ngStyle]="{'background-color': getColor(col)}">{{j}}</ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col *ngFor="let product of products">
+              Добуток: {{ product }}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-card-content>
+</ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Лабораторна робота №1</ion-title>
+  </ion-toolbar>
+</ion-footer>
