@@ -10,8 +10,8 @@ let gascompany: Gascompany;
 beforeEach(() => {
 shower = new Show_Console();
 shower1 = new Show_Desktop();
-let gascompany = new Gascompany ("UkrTransNafta","island Kipr, Central 1","Oil",shower); 
-let insurance = new Insurance ("Better Call Soul ","island Kipr, Central 1","Private",shower1); 
+gascompany = new Gascompany ("UkrTransNafta","island Kipr, Central 1","Oil",shower); 
+insurance = new Insurance ("Better Call Soul ","island Kipr, Central 1","Private",shower1); 
 })
 fit ("Створення екземпляру класу Shower", () => {
 expect (shower).toBeTruthy();
