@@ -28,6 +28,10 @@ const routes: Routes = [
   {
     path: 'observablepage',
     loadChildren: () => import('./observablepage/observablepage.module').then( m => m.ObservablepagePageModule)
+  },
+  {
+    path: 'lab10',
+    loadChildren: () => import('./lab10/lab10.module').then( m => m.Lab10PageModule)
   }
 
 ];

@@ -18,4 +18,5 @@ export class ConfigService {
 
   constructor() { }
 }
-const DEFAULT_COUNT={"id":1, "name":"Укр"};
+var countryList=new CountryList();
+const DEFAULT_COUNT=countryList.count.get(0);

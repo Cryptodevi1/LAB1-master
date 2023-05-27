@@ -1,4 +1,4 @@
-<app-my-header name="Лабораторна робота №11"></app-my-header>
+<app-my-header name="Лабораторна робота №10"></app-my-header>
 <ion-content [fullscreen]="true">
   <ion-item>
     <ion-button (click)="nextCountry()">Наступна країна</ion-button>
@@ -9,8 +9,8 @@
       {{country.name}}
     </ion-label>
   </ion-item>
-  <ion-item *ngFor="let memo of memoList.searchMemo; let j = index">
-    {{memo.name}}
+  <ion-item *ngFor="let memo of memoList.searchMemoResult; let j = index">
+    {{memo}}
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Введіть нову країну</ion-label>

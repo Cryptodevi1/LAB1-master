@@ -3,10 +3,8 @@ import {Memo} from "./memo"
 
 export class MemoList
 {
-    private memoList = new Array();
-    private searchMemo= new Array();
-
-    searchMemoResult:string[] = [];
+    memoList = new Array();
+    searchMemo= new Array();
 
     countrySub = this.configService.count$
         .subscribe(()=>{
@@ -15,17 +13,7 @@ export class MemoList
         this.search(country.id);
         });
         constructor(private configService:ConfigService)
-        {
-            let memo = new Memo();
-            memo.name= "Золоті Ворота"
-            memo.count_id=0;
-            this.add(memo);
-            let memo1 = new Memo();
-            memo1.name= "Асканія Нова"
-            memo1.count_id=1;
-            this.add(memo1);
-         this.search(0)
-        }
+        {}
 
     add(memo: Memo){
         this.memoList.push(memo);
@@ -35,9 +23,5 @@ export class MemoList
         this.searchMemo=this.memoList.filter((memo)=>{
             return memo.count_id == id1; 
         })
-        this.searchMemoResult = [];
-        this.searchMemo.forEach(el => {
-            this.searchMemoResult.push('Назва:' + el.name);
-        });
     }
 }
